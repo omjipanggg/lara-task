@@ -1,0 +1,199 @@
+/*===========================================================================*/
+/*BASE*/
+:root {
+	--hue: 21;
+	--primary: hsl(var(--hue), 25%, 25%);
+	--secondary: hsl(var(--hue), 34%, 44%);
+	--bg: hsl(var(--hue), 98%, 98%);
+	--focus: hsl(var(--hue), 20%, 20%);
+	--active: hsl(var(--hue), 15%, 15%);
+	--dark: hsl(var(--hue), 10%, 10%);
+	--thin: hsl(var(--hue), 95%, 95%);
+	--border: hsla(var(--hue), 25%, 25%, .5);
+	--selection: hsl(var(--hue), 64%, 84%);
+}
+*, *::after, *::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+*::selection {
+	color: var(--dark);
+	background-color: var(--selection);
+}
+::-webkit-scrollbar {
+	width: 5px;
+    background-color: var(--primary);
+}
+::-webkit-scrollbar-track {
+    background-color: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    min-height: 10px;
+    min-width: 10px;
+}
+a.permalink { text-decoration-style: dotted; text-decoration-line: underline; }
+a { color: var(--dark); text-decoration: none; }
+a:hover { color: var(--dark); text-decoration: underline; }
+a, p { margin:0; }
+body {
+	font-family: 'Ubuntu', sans-serif;
+	background-color: var(--bg);
+}
+
+/*===========================================================================*/
+/*TWEAK*/
+.initial { height: 70px; }
+.gap-half { grid-gap: .5rem; }
+.btn.btn-dark:focus,
+.btn.btn-dark:hover,
+.navbar-toggler:hover {
+	outline: 0!important;
+	box-shadow: none!important;
+	background-color: var(--focus);
+}
+.btn.btn-outline-dark {	border-color: var(--primary); }
+.btn.btn-outline-dark:focus,
+.btn.btn-outline-dark:hover {
+	outline: 0!important;
+	box-shadow: none!important;
+	color: var(--bg);
+	background-color: var(--focus);
+}
+.btn.btn-dark {
+	border: 1px solid var(--border);
+	background-color: var(--primary);
+}
+
+.btn.btn-dark:active,
+.btn.btn-outline-dark:active {
+	background-color: var(--active);
+}
+
+/*===========================================================================*/
+/*FORM*/
+.alert {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	top: 56px;
+	border-radius: 0;
+	margin: 0 auto!important;
+}
+
+/*===========================================================================*/
+/*FORM*/
+.form-control:focus {
+	outline: 0!important;
+	box-shadow: none!important;
+	border-color: var(--border);
+}
+.form-control {
+	margin-bottom: .5rem;
+}
+.text-notice { margin: 1rem 0; }
+.input-group {
+	align-items: center;
+	grid-gap: .5rem;
+}
+
+/*===========================================================================*/
+/*NAVBAR*/
+.navbar {
+	transition: all 300ms ease-in-out;
+	z-index: 1030;
+	position: fixed;
+	width: 100%;
+}
+.navbar-toggler:focus {
+	outline: 2px solid black;
+	box-shadow: none!important;
+	background-color: var(--focus);
+}
+.navbar-brand:focus, .nav-link:focus {
+    outline: 0!important;
+    text-decoration: underline;
+    box-shadow: none!important;
+}
+.bg-dark {
+	background-color: var(--primary)!important;
+}
+.me-2 { margin: 0!important; }
+.animated {
+	transition: all 250ms ease-in-out;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+	background-color: var(--thin);
+}
+.dropdown-item:active {
+	background-color: var(--secondary);
+}
+#moving {
+	height: .25rem;
+	width: 2px;
+	background-color: var(--secondary);
+	position: fixed;
+	z-index: 1032;
+	top: 0;
+}
+
+/*===========================================================================*/
+/*BREADCRUMD*/
+.breadcrumb {
+	background-color: var(--thin);
+	border: 1px solid var(--border);
+	padding: 12px;
+	border-radius: .25rem;
+	margin: 0 12px 1rem;
+}
+ol { margin: 0; }
+
+/*===========================================================================*/
+/*TEXT*/
+.text-justify {
+	text-align: justify;
+}
+.striked {
+	text-decoration: line-through;
+}
+
+/*===========================================================================*/
+/*CONTENT*/
+.box {
+	padding: 2rem;
+	background-color: var(--thin);
+	border: 1px solid var(--border);
+	border-radius: .25rem;
+}
+.card {
+	border-color: var(--border);
+}
+.card-header, .card-footer {
+	background-color: var(--thin);
+}
+.card-header {
+	border-bottom: 1px solid var(--border);
+}
+.card-footer{
+	border-top: 1px solid var(--border);
+}
+.tasks .form-control { margin: 0; }
+.card-text {}
+table tr td { vertical-align: middle; }
+td.del {
+	width: 50px;
+	margin: auto;
+	text-align: center;
+}
+
+/*===========================================================================*/
+/*FOOTER*/
+.m-14 {	margin-top: 14px; }
+
+/*===========================================================================*/
+/*FOOTER*/
+footer {
+	background-color: var(--primary);
+}
